@@ -1,0 +1,295 @@
+#include<stdio.h>
+
+#include<conio.h>
+
+main()
+
+{
+
+	int id1=2132,id2=2102,id3=2453,time=0, p1=2,p2=4,p3=8,p=0,p1w=0,p2w=0,p3w=0,tt=0,a,b,c;
+
+	a=p1;b=p2;c=p3;
+
+	float avgwt=0,avgta=0,sumw=0;
+
+	printf("\n for student s1 id is:%d  process time is :%d\n",id1,p1);
+
+	printf("\n for student s2 id is:%d  process time is :%d\n",id2,p2);
+
+	printf("\n for student s3 id is:%d  process time is :%d\n",id3,p3);
+
+	printf("\n\n");
+
+	printf("order \tp1|p2|p3\n");
+
+	printf("----- \t--------\n");
+
+		printf("\t%d |%d |%d\n",p1,p2,p3);
+
+	for(int i=0;i<14;i++)
+
+	{
+
+        if(p3>p1 && p3>p2 && p3>=p)
+
+        {
+
+        	p3=p3-1;
+
+        	if(p1!=0)
+
+        	{
+
+        		p1w+=1;
+
+			}
+
+			if(p2!=0)
+
+			{
+
+				p2w+=1;
+
+			}
+
+        	printf(" p3\t");
+
+		}
+
+		else if(p2>p1 && p2>p3 && p2>=p)
+
+        {
+
+        	p2=p2-1;
+
+				if(p1!=0)
+
+        	{
+
+        		p1w+=1;
+
+			}
+
+			if(p3!=0)
+
+			{
+
+				p3w+=1;
+
+			}printf(" p2\t");
+
+		}
+
+	    else if(p1>p3 && p1>p2 && p1>=p)
+
+        {
+
+        	p1=p1-1;
+
+				if(p3!=0)
+
+        	{
+
+        		p3w+=1;
+
+			}
+
+			if(p2!=0)
+
+			{
+
+				p2w+=1;
+
+			}printf(" p1\t");
+
+		}
+
+		else if(p3==p2)
+
+		{
+
+			if(id3<id2)
+
+			{
+
+				p3=p3-1;
+
+					if(p1!=0)
+
+        	{
+
+        		p1w+=1;
+
+			}
+
+			if(p2!=0)
+
+			{
+
+				p2w+=1;
+
+			}
+
+			printf(" p3\t");
+
+			}
+
+			else if(id2<id3)
+
+			{
+
+				p2=p2-1;printf(" p2\t");
+
+				if(p1!=0)
+
+        	{
+
+        		p1w+=1;
+
+			}
+
+			if(p3!=0)
+
+			{
+
+				p3w+=1;
+
+			}
+
+			}
+
+		}
+
+				else if(p3==p1)
+
+		{
+
+			if(id3<id1)
+
+			{
+
+				p3=p3-1;printf(" p3\t");
+
+				if(p1!=0)
+
+        	{
+
+        		p1w+=1;
+
+			}
+
+			if(p2!=0)
+
+			{
+
+				p2w+=1;
+
+			}
+
+			}
+
+			else if(id1<id3)
+
+			{
+
+				p1=p1-1;printf(" p1\t");
+
+				if(p3!=0)
+
+        	{
+
+        		p3w+=1;
+
+			}
+
+			if(p2!=0)
+
+			{
+
+				p2w+=1;
+
+			}
+
+			}
+
+		}
+
+				else if(p1==p2)
+
+		{
+
+			if(id1<id2)
+
+			{
+
+				p1=p1-1;
+
+					if(p3!=0)
+
+        	{
+
+        		p3w+=1;
+
+			}
+
+			if(p2!=0)
+
+			{
+
+				p2w+=1;
+
+			}printf(" p1\t");
+
+			}
+
+			else if(id2<id1)
+
+			{
+
+				p2=p2-1;printf(" p2\t");
+
+				if(p1!=0)
+
+        	{
+
+        		p1w+=1;
+
+			}
+
+			if(p3!=0)
+
+			{
+
+				p3w+=1;
+
+			}
+
+			}
+
+		}
+
+		 printf("%d  |%d |%d\n",p1,p2,p3);
+
+		 time =time+1;
+
+	}
+
+		printf("\n time taken to complete all 3 processes is :%d\n",time);
+
+	printf("waiting time of p1 :%d%d%d\n",p1w,p2w,p3w);
+
+	sumw=p1w+p2w+p3w;
+
+	avgwt=sumw/3;
+
+	printf("average waiting time :%f\n",avgwt);
+
+    tt= sumw+a+b+c;
+
+	avgta=tt/3;
+
+	printf("average turnaround time :%f\n",avgta);
+
+	printf("\end of program");
+
+} 
